@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tempo-cli"
+version = "0.4.1"
+description = "Terminal time tracking"
+requires-python = ">=3.10"
+authors = [{ name = "mdc", email = "mdc@example.com" }]
+dependencies = [
+  "click>=8.1",   # vestigial: we moved to argparse in 0.3, nothing imports it
+]
+
+[project.scripts]
+tempo = "tempo.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 88
