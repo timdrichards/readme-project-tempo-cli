@@ -2,7 +2,7 @@
 
 How your README is reviewed, improved, merged and submitted: phases 2 to 6 of the assignment. Phases 0 (set up) and 1 (draft) are in your project's `START.md`; do those first. Everything happens on the GitHub website, in your browser. You do not need to install anything, use a terminal, or download the repository.
 
-Words such as *branch*, *pull request* and *merge* are explained in `START.md`, under "A few words you will see".
+Words such as *branch*, *pull request* and *merge* are explained in `START.md`, under "Git and GitHub, from the beginning".
 
 **Why only the website?** Every step of this assignment can be done and explained inside GitHub, so everyone works the same way and every step below matches what you see. Do not clone the repository or work in another editor. Course staff can only help with problems that happen on the GitHub website.
 
@@ -13,6 +13,8 @@ Words such as *branch*, *pull request* and *merge* are explained in `START.md`, 
 - **Instructor and course staff:** they can see your repository and your review. Your instructor will give you their GitHub usernames.
 
 ## The phases
+
+![The seven phases: set up, draft, review, revise, approve, merge, submit. Phases 2 to 4 repeat until both reviewers approve.](images/phases.svg)
 
 | Phase | Who | What happens | Done when |
 |---|---|---|---|

@@ -49,6 +49,7 @@ readers land on the same page.
 | `dev-chat.md` | A Slack thread between the two developers about why nobody can install it |
 | `user-email.md` | An email from Petra, a researcher who spent forty minutes trying to get started |
 | `SPEC.md` | The README specification for this assignment: the sections your README needs, in order |
+| `images/` | Diagrams used in this file and in `PEER.md` |
 | `PEER.md` | Phases 2 to 6: how your README is peer reviewed, revised, merged, and submitted |
 
 ## A reading order that works
@@ -117,9 +118,96 @@ that guess is a question for the maintainer, not a sentence in the README.
 **If something is genuinely unclear, say so.** "Not tested on Windows" is a
 useful sentence. Silence is not.
 
+## Git and GitHub, from the beginning
+
+You do not need to have used Git or GitHub before. This section explains every idea the assignment uses, in the order you will meet them. Read it once now, and come back to the table at the end whenever a word is unfamiliar.
+
+### Git and GitHub are two different things
+
+**Git** is a tool that keeps track of changes to a set of files. Every time you save a version, Git records exactly what changed, who changed it, when, and why. It never throws an old version away, so you can always see how a file got to where it is, or go back to an earlier version. Programmers use it on nearly every software project in the world.
+
+**GitHub** is a website that stores Git projects online and adds the things people need to work together on them: deciding who can see a project, proposing changes, and reviewing each other's work. You will use Git's ideas through GitHub's website, so you never have to install Git or type a command.
+
+![GitHub is the website that holds your repository and lets people work together on it. Git is the tool inside it that records files, commits and branches.](images/git-and-github.svg)
+
+*GitHub holds your repository. Inside it, Git keeps the files, every saved version, and the branches. Around it, GitHub adds the people: collaborators, pull requests and reviews.*
+
+### Repository
+
+A **repository** (often shortened to *repo*) is one project's folder on GitHub: its files, plus the complete history of every change ever made to them. The project you are documenting is a repository. Yours is a private copy made from a **template**, a starting repository your instructor prepared, so nothing you do affects anyone else's copy.
+
+### Adding a file and committing
+
+On GitHub you add a new file, or edit an existing one, in an editor in your browser. While you type, nothing is saved yet. When you click **Commit changes**, GitHub saves a **commit**: a snapshot of your files at that moment, with a short **commit message** describing what you changed ("Add Install section", "Fix the install command").
+
+You can commit as often as you like. Each commit is kept forever in the repository's **history**, so you can open any earlier version and see exactly which lines changed. A commit is not a final submission; it is closer to pressing save, except that every save is kept.
+
+![Adding or editing a file and clicking Commit changes saves a snapshot called a commit. Each commit is kept in the history, so every earlier version can be opened.](images/commits.svg)
+
+*Editing changes nothing until you commit. Each commit adds a new version to the history, and the earlier versions stay.*
+
+### Branches
+
+A **branch** is a separate line of work inside the same repository: a draft copy of the files where you can make changes without touching the original. Every repository starts with one branch called **main**, which holds the finished, official version.
+
+In this assignment you write your README on a second branch called **readme-draft**. Your commits go there, and `main` stays exactly as it was until your README has been reviewed and approved.
+
+### Pull requests
+
+A **pull request** (often shortened to *PR*) is a request to bring the changes on one branch into another: here, from `readme-draft` into `main`. It is also where the review happens. A pull request has its own page on GitHub showing every change you made, line by line, with tabs for the discussion (**Conversation**), your saved versions (**Commits**) and the changes themselves (**Files changed**). Reviewers comment on individual lines there, and suggest exact wording.
+
+When you commit more changes to `readme-draft`, they appear in the same pull request automatically. You open one pull request, and it collects the whole conversation.
+
+### Reviews, approval and merging
+
+A **review** is a reviewer's set of comments on a pull request, submitted together, with an overall verdict: **Comment**, **Request changes**, or **Approve**. When both your reviewers have approved, you **merge** the pull request: GitHub copies the changes from `readme-draft` into `main`. Your README is then part of the official version of the repository and appears on its front page.
+
+![The README is written on a branch called readme-draft. A pull request collects the reviewers' comments and each new commit. After approval the branch is merged into main.](images/branch-and-pull-request.svg)
+
+*The whole workflow: create a branch, commit your draft, open a pull request, get reviews, commit revisions, and merge into `main` once both reviewers approve.*
+
+### Why this works for writing as well as for code
+
+Programmers rarely change important code alone. They make the change on a branch, open a pull request, and a colleague reads it before it is merged. The reviewer catches what the author cannot see, because the author already knows what they meant. The author revises, and the cycle repeats until the change is good.
+
+Writing works the same way, and a README especially so: its whole job is to make sense to someone who is not you. A reviewer who tries to follow your install steps and gets stuck has found a real problem that you could not have found by rereading your own words. Branches, commits and pull requests make this loop easy: every draft is saved, every comment sits next to the line it is about, and every revision shows exactly what changed in response. That is why you will go through at least one full round of review and revision before your README is merged.
+
+![Write, commit, review, revise, and repeat. The same pull request loop that improves code improves a README.](images/iteration.svg)
+
+*The loop you will follow: write, commit, get it reviewed, revise, and go round again until it is ready.*
+
+### Words you will meet
+
+| Word | What it means here |
+|---|---|
+| Git | The tool that records every change to a project's files |
+| GitHub | The website that stores your repository and lets people work on it together |
+| Repository (repo) | A project's folder on GitHub: its files and their full history |
+| Template | A starting repository; your repository is a private copy of one |
+| Markdown | The simple formatting language a README is written in |
+| Commit | A saved snapshot of the files, made when you click **Commit changes** |
+| Commit message | The short description of what a commit changed |
+| History | The list of every commit, oldest to newest |
+| Branch | A separate line of work in the same repository |
+| `main` | The branch that holds the finished, official version |
+| `readme-draft` | The branch you write your README on |
+| Pull request (PR) | A request to bring one branch's changes into another, and the page where they are reviewed |
+| Files changed | The pull request tab that shows every changed line |
+| Review | A reviewer's comments on a pull request, submitted together with a verdict |
+| Suggestion | A review comment that proposes exact replacement text, which the author can accept with one click |
+| Approve | A reviewer's verdict that the pull request is ready to merge |
+| Request changes | A reviewer's verdict that something must change first |
+| Resolve conversation | Marking a comment thread as dealt with |
+| Merge | Bringing a branch's changes into `main` |
+| Collaborator | Someone you have given access to your private repository |
+
 ## How the assignment runs
 
 You do everything on the GitHub website, in your browser. Do not clone the repository or use another editor: every step is explained inside GitHub, so everyone works the same way, and course staff can only help with problems that happen there.
+
+![The seven phases: set up, draft, review, revise, approve, merge, submit. Phases 2 to 4 repeat until both reviewers approve. Phases 0 and 1 are in this file, the rest in PEER.md.](images/phases.svg)
+
+*The seven phases. Review, revise and approve repeat until both reviewers approve.*
 
 | Phase | Who | What happens | Where it is explained |
 |---|---|---|---|
@@ -134,14 +222,6 @@ You do everything on the GitHub website, in your browser. Do not clone the repos
 Phases 0 and 1 are below. When your pull request is open, continue with [PEER.md](PEER.md). You will also be a reviewer for two classmates, so read phases 2 and 4 of [PEER.md](PEER.md) before your first review.
 
 Your instructor will tell you when drafts are due, who your reviewers are, and the GitHub usernames of the instructor and course staff.
-
-### A few words you will see
-
-- **Repository:** your copy of the project on GitHub: all its files and their history.
-- **Commit:** a saved change. Every time you click **Commit changes**, GitHub saves a new version and keeps the old ones.
-- **Branch:** a separate draft copy of your files, inside the same repository. Your repository starts with one branch, called `main`: think of it as the finished, published version. You will write your README on a second branch, called `readme-draft`. Nothing you do on `readme-draft` changes `main` until you choose to bring it across.
-- **Pull request:** a request to bring the changes on your draft branch into `main`. It is also the place where reviewers read your changes and comment on them, line by line. The pull request is the review.
-- **Merge:** bringing the draft into `main`, once your reviewers approve. After merging, your README is part of `main`.
 
 ### Phase 0: Set up
 
