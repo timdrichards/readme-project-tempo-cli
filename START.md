@@ -34,6 +34,8 @@ readers land on the same page.
 | `issues.md` | Four issue threads from the tracker, with the maintainer's replies |
 | `dev-chat.md` | A Slack thread between the two developers about why nobody can install it |
 | `user-email.md` | An email from Petra, a researcher who spent forty minutes trying to get started |
+| `SPEC.md` | The README specification for this assignment: the sections your README needs, in order |
+| `PEER.md` | How your README is written on a branch, peer reviewed, merged, and submitted |
 
 ## A reading order that works
 
@@ -72,12 +74,13 @@ Answer these for yourself. If you cannot, go back to the material.
 
 ## What the README has to contain
 
-**Follow the [Standard Readme spec](https://github.com/RichardLitt/standard-readme).**
-That means, at minimum, these sections, in this order: Title, Short
-Description, an optional Long Description, Table of Contents, Install, Usage,
-API (this project has one, so it is not optional here), Contributing, License.
-Read the spec before you start — it is short, and it settles most of the
-arguments you would otherwise have with yourself about ordering.
+**Follow [SPEC.md](SPEC.md).** It is this assignment's README specification,
+adapted from the [Standard Readme spec](https://github.com/RichardLitt/standard-readme).
+It lists the sections, in order: Title, an optional Banner, Description, Table
+of Contents, Install, Usage, optional extra sections, API (required: this
+project has one), Maintainers, and Credits. Read it before you start. It is
+short, and it settles most of the arguments you would otherwise have with
+yourself about what goes where.
 
 **Include worked examples of both halves of the project.**
 
@@ -90,6 +93,19 @@ arguments you would otherwise have with yourself about ordering.
 Examples must be consistent with the source in this folder. If you are not
 sure what a command prints, that is a sign to go back and read `cli.py` rather
 than to make something up.
+
+## How you write it, and how it is reviewed
+
+**Work only in the GitHub website.** Write `README.md` in your browser, in
+your repository on GitHub. Do not clone the repository or use another editor:
+every step of this assignment is explained inside GitHub, and course staff can
+only help with problems that happen there.
+
+You write the README on a branch called `readme-draft` and open a pull
+request, where two classmates review it line by line. You revise, they
+approve, you merge, and you submit a PDF of the finished README on Canvas.
+[PEER.md](PEER.md) explains every step, starting with how to create
+`README.md`.
 
 ## Two rules
 
@@ -104,6 +120,6 @@ useful sentence. Silence is not.
 
 This repository is your own copy of the project, made from the course template. Write your README as a file named `README.md` at the top level of this repository, next to this `START.md`, not inside `src/`.
 
-Commit it to the `main` branch. GitHub shows `README.md` on the repository's front page, so open your repository in a browser after you commit and check that it reads the way you meant it to. Leave every other file as it is: your README describes this code, it does not change it.
+Do not commit it straight to the `main` branch. Create it on a branch called `readme-draft` and open a pull request, as [PEER.md](PEER.md) explains, so your reviewers can comment on it. Once both reviewers approve and you merge, GitHub shows `README.md` on the repository's front page: open your repository in a browser and check that it reads the way you meant it to. Leave every other file as it is: your README describes this code, it does not change it.
 
-Your instructor will tell you when drafts are due, and who to add as collaborators so they can read your work.
+Your instructor will tell you when drafts are due, who your reviewers are, and the GitHub usernames to add as collaborators.
